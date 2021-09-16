@@ -1,12 +1,13 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
+require("dotenv").config();
 
 const db = require('./db')
 const formRouter = require('./routes/form-router')
 
 const app = express()
-const apiPort = 3000
+const port = 3000
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
@@ -16,4 +17,4 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 app.use('/api', formRouter)
 
-app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
+app.listen(port, () => console.log(`http//:localhost:${port}`))

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-
+process.env.DB_HOST
 mongoose
-  .connect("mongodb://127.0.0.1:27017/formmaker", { useNewUrlParser: true })
+  .connect(process.env.DB_HOST, { useNewUrlParser: true })
   .catch((e) => {
     console.error("Connection error", e.message);
   });
