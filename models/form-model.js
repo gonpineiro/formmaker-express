@@ -4,8 +4,11 @@ const Schema = mongoose.Schema;
 const Form = new Schema(
   {
     name: { type: String, required: true },
-    time: { type: [String], required: true },
-    rating: { type: Number, required: true },
+    description: { type: String, required: true },
+    hcolor: { type: String, required: true },
+    banner: { type: String, required: true },
+    terminosCondiciones: { type: String, required: true },
+    fields: { type: [Object], required: true },
   },
   { timestamps: true }
 );
