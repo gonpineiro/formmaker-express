@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+const { DB_HOST } = require("../config/env");
 
-mongoose.connect(process.env.DB_HOST, { useNewUrlParser: true }).catch((e) => {
+mongoose.connect(DB_HOST, { useNewUrlParser: true }).catch((e) => {
   console.error("Connection error", e.message);
 });
 

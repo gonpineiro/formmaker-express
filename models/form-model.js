@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const Form = new Schema(
   {
-    name: { type: String, required: true },
+    nombre: { type: String, required: true },
     description: { type: String, required: true },
     hcolor: { type: String, required: true },
     banner: { type: String, required: true },
